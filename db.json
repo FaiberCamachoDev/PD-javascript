@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": "0",
+      "name": "admin",
+      "email": "admin@mega.com",
+      "password": "1234",
+      "role": "admin",
+      "tasks": []
+    },
+    {
+      "name": "Faiber",
+      "email": "test1@mega.com",
+      "password": "1234",
+      "tasks": [],
+      "role": "user",
+      "id": "098MN7z"
+    }
+  ]
+}
