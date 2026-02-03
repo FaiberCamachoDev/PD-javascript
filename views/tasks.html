@@ -1,339 +1,337 @@
-</html>
-<!DOCTYPE html>
-<html lang="en">
+<aside class="w-64 bg-white border-r min-h-screen px-4 py-6 hidden md:block">
+    <div class="mb-10 flex flex-row">
+        <img src="./assets/icons/CRUDZASO.svg" alt="">
+        <h1 class="mt-3 ms-2 font-extrabold text-2xl">CRUDZASO</h1>
+    </div>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>My Tasks | user</title>
-</head>
+    <nav>
+        <a href="#" class="flex items-center gap-3 px-4 py-5 rounded-lg bg-blue-100 text-blue-600 font-medium">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3" />
+            </svg>
+            Dashboard
+        </a>
+        <a href="../views/profile.html"
+            class="flex items-center gap-3 px-4 py-5 mt-3 rounded-lg text-gray-600 hover:bg-gray-100">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+            </svg>
+            Profile
+        </a>
+    </nav>
+</aside>
+<!-- Main content -->
+<div class="flex-1 flex flex-col">
 
-<body class="bg-gray-100 min-h-screen flex">
-
-    <!-- Sidebar -->
-    <aside class="w-64 bg-white border-r min-h-screen px-4 py-6 hidden md:block">
-        <div class="mb-10 flex flex-row">
-            <img src="./assets/icons/CRUDZASO.svg" alt="">
-            <h1 class="mt-3 ms-2 font-extrabold text-2xl">CRUDZASO</h1>
+    <header class="bg-white border-b px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-2 text-sm text-gray-500">
+            <span>Dashboard</span>
         </div>
 
-        <nav>
-            <a href="#" class="flex items-center gap-3 px-4 py-5 rounded-lg bg-blue-100 text-blue-600 font-medium">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3" />
+        <div class="flex items-center gap-4">
+            <button class="relative">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
                 </svg>
-Dashboard
-            </a>
-            <a href="../views/profile.html" class="flex items-center gap-3 px-4 py-5 mt-3 rounded-lg text-gray-600 hover:bg-gray-100">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+            </button>
+
+            <div class="flex items-center gap-3">
+                <img src="./assets/images/dog-user-img.png" class="w-10 h-10 rounded-full" />
+                <div class="text-sm">
+                    <p id="profile-name" class="font-medium text-gray-800"></p>
+                    <p id="profile-profession" class="text-gray-500"></p>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red"
+                    class="size-6 cursor-pointer" id="logout">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
                 </svg>
-                Profile
-            </a>
-        </nav>
-    </aside>
 
-    <!-- Main content -->
-    <div class="flex-1 flex flex-col">
-
-        <header class="bg-white border-b px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2 text-sm text-gray-500">
-                <span>Dashboard</span>
             </div>
 
-            <div class="flex items-center gap-4">
-                <button class="relative">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
-                    </svg>
-                </button>
+            <button id="logout" class="">
+                <img src="./assets/icons/logout.svg" alt="">
+            </button>
+    </header>
+    <main class="p-6">
 
-                <div class="flex items-center gap-3">
-                    <img src="./assets/images/dog-user-img.png" class="w-10 h-10 rounded-full" />
-                    <div class="text-sm">
-                        <p id="profile-name" class="font-medium text-gray-800"></p>
-                        <p id="profile-profession" class="text-gray-500"></p>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="size-6 cursor-pointer" id="logout">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
-                    </svg>
-
-                </div>
-
-                <button id="logout" class="">
-                    <img src="./assets/icons/logout.svg" alt="">
-                </button>
-        </header>
-        <main class="p-6">
-
-            <!-- Title and Creation Btn -->
-            <div class="flex justify-between items-center mb-6">
-                <div>
-                    <h2 class="text-2xl font-bold text-gray-800">Task Manager</h2>
-                    <p class="text-gray-500 text-sm">organize all academic tasks in one place.</p>
-                </div>
-
-                <button id="new-task-btn"
-                    class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 flex flex-row">
-                    <img src="./assets/icons/new-task.svg" alt=""> New Task +
-                </button>
+        <!-- Title and Creation Btn -->
+        <div class="flex justify-between items-center mb-6">
+            <div>
+                <h2 class="text-2xl font-bold text-gray-800">Task Manager</h2>
+                <p class="text-gray-500 text-sm">organize all academic tasks in one place.</p>
             </div>
 
-            <!-- Stats -->
-            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <div class="bg-white p-5 rounded-xl shadow-sm flex flex-row place-content-between">
-                    <div>
-                        <p class="text-gray-500 text-sm">Total Tasks</p>
-                        <p id="total-tasks" class="text-3xl font-bold text-gray-800 mt-2"></p>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M6 6.878V6a2.25 2.25 0 0 1 2.25-2.25h7.5A2.25 2.25 0 0 1 18 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 0 0 4.5 9v.878m13.5-3A2.25 2.25 0 0 1 19.5 9v.878m0 0a2.246 2.246 0 0 0-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0 1 21 12v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6c0-.98.626-1.813 1.5-2.122" />
-</svg>
-
-                </div>
-
-                <div class="bg-white p-5 rounded-xl shadow-sm flex flex-row place-content-between">
-                    <div>
-                        <p class="text-gray-500 text-sm">In Progress</p>
-                        <p id="progress-tasks" class="text-3xl font-bold text-gray-800 mt-2">12</p>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
-</svg>
-
-                </div>
-
-                <div class="bg-white p-5 rounded-xl shadow-sm flex flex-row place-content-between">
-                    <div>
-                        <p class="text-gray-500 text-sm">Completed</p>
-                        <p id="completed-tasks" class="text-3xl font-bold text-gray-800 mt-2">84</p>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
-</svg>
-
-                </div>
-
-                <div class="bg-white p-5 rounded-xl shadow-sm flex flex-row place-content-between">
-                    <div>
-                        <p class="text-gray-500 text-sm">Pending Reviw</p>
-                        <p id="pending-taks" class="text-3xl font-bold text-gray-800 mt-2"></p>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-</svg>
-
-                </div>
-            </section>
-
-            <!-- Search filters -->
-            <div class="mb-4 flex justify-between items-center">
-                <input type="text" disabled placeholder="Search tasks..."
-                    class="w-full max-w-sm px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" />
-            </div>
-
-            <!-- card table-->
-            <section class="bg-white rounded-xl shadow-sm overflow-hidden">
-                <table class="w-full text-sm">
-                    <thead class="bg-blue-50 text-gray-600">
-                        <tr>
-                            <th class="px-6 py-3 text-left">Task Name</th>
-                            <th class="px-6 py-3 text-left">Category</th>
-                            <th class="px-6 py-3 text-left">Priority</th>
-                            <th class="px-6 py-3 text-left">Status</th>
-                            <th class="px-6 py-3 text-left">Due Date</th>
-                            <th class="px-6 py-3 text-left">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody">
-                    </tbody>
-                </table>
-            </section>
-        </main>
-    </div>
-    <div id="create-task-modal" class="hidden bg-gray-100 min-h-screen absolute inset-0 bg-black bg-opacity-60">
-        <div class="max-w-4xl mx-auto px-6 py-10">
-
-            <div class="text-sm text-gray-500 mb-2 flex flex-row">
-                <img src="./assets/icons/left-arrow.svg" alt="">Back to Tasks / <span class="text-gray-700">Create
-                    New</span>
-            </div>
-
-            <!-- Title -->
-            <h1 class="text-2xl font-bold mb-6">Create New Task</h1>
-
-            <!-- Form card -->
-            <form id="tasks-form" class="bg-white rounded-xl shadow-sm p-8 space-y-6">
-
-                <!-- Task title -->
-                <div>
-                    <label class="block text-sm font-medium mb-1">
-                        Task Title <span class="text-red-500">*</span>
-                    </label>
-                    <input id="form-task-title" type="text" placeholder="e.g., Complete Quarter 3 Report"
-                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
-                </div>
-
-                <!-- Category & Priority -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm font-medium mb-1">Category</label>
-                        <select id="form-task-category" class="w-full px-4 py-2 border rounded-lg bg-white">
-                            <option selected disabled>Select category</option>
-                            <option value="Practice">Practice</option>
-                            <option value="Preparation">Preparation</option>
-                            <option value="Reinforcement">Reinforcement</option>
-                            <option value="Learning">Learning</option>
-                            <option value="Deepening">Deepening</option>
-                            <option value="Testing">Testing</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium mb-1">Priority</label>
-                        <select id="form-task-priority" class="w-full px-4 py-2 border rounded-lg bg-white">
-                            <option selected disabled>Select priority</option>
-                            <option value="Medium">Medium</option>
-                            <option value="High">High</option>
-                            <option value="Low">Low</option>
-                        </select>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Frecuency & Due date -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm font-medium mb-1">Frequency</label>
-                        <select id="form-task-frequency" class="w-full px-4 py-2 border rounded-lg bg-white">
-                            <option selected disabled>Select frequency</option>
-                            <option value="Daily">Daily</option>
-                            <option value="Weekly">Weekly</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium mb-1">Due Date</label>
-                        <input id="form-task-due-date" type="date" class="w-full px-4 py-2 border rounded-lg">
-                    </div>
-                </div>
-
-                <!-- Description -->
-                <div>
-                    <label class="block text-sm font-medium mb-1">Description</label>
-                    <input id="form-task-description" rows="4" placeholder="Add details about this task..."
-                        class="w-full px-4 py-2 border rounded-lg resize-none">
-                </div>
-
-                <hr>
-
-                <!-- Actions -->
-                <div class="flex justify-end gap-4">
-                    <button type="button" class="px-6 py-2 border rounded-lg hover:bg-gray-100">
-                        Cancel
-                    </button>
-
-                    <button type="submit"
-                        class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center gap-2">
-                        <img src="./assets/icons/save.svg" alt="">Save Task
-                    </button>
-                </div>
-
-            </form>
+            <button id="new-task-btn"
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 flex flex-row">
+                <img src="./assets/icons/new-task.svg" alt=""> New Task +
+            </button>
         </div>
-    </div>
-    <div id="edit-task-modal" class="hidden bg-gray-100 min-h-screen absolute inset-0 bg-black bg-opacity-60">
-        <div class="max-w-4xl mx-auto px-6 py-10">
 
-            <div class="text-sm text-gray-500 mb-2 flex flex-row">
-                <img src="./assets/icons/left-arrow.svg" alt="">Back to Tasks / <span class="text-gray-700">Edit
-                    Task</span>
+        <!-- Stats -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white p-5 rounded-xl shadow-sm flex flex-row place-content-between">
+                <div>
+                    <p class="text-gray-500 text-sm">Total Tasks</p>
+                    <p id="total-tasks" class="text-3xl font-bold text-gray-800 mt-2"></p>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M6 6.878V6a2.25 2.25 0 0 1 2.25-2.25h7.5A2.25 2.25 0 0 1 18 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 0 0 4.5 9v.878m13.5-3A2.25 2.25 0 0 1 19.5 9v.878m0 0a2.246 2.246 0 0 0-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0 1 21 12v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6c0-.98.626-1.813 1.5-2.122" />
+                </svg>
+
             </div>
 
-            <!-- Title -->
-            <h1 class="text-2xl font-bold mb-6">Edit a Task</h1>
-
-            <!-- Form card -->
-            <form id="edit-task-form" class="bg-white rounded-xl shadow-sm p-8 space-y-6">
-
-                <!-- Task title -->
+            <div class="bg-white p-5 rounded-xl shadow-sm flex flex-row place-content-between">
                 <div>
-                    <label class="block text-sm font-medium mb-1">
-                        Task Title <span class="text-red-500">*</span>
-                    </label>
-                    <input id="edit-title" type="text" placeholder="e.g., Complete Quarter 3 Report"
-                        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    <p class="text-gray-500 text-sm">In Progress</p>
+                    <p id="progress-tasks" class="text-3xl font-bold text-gray-800 mt-2">12</p>
                 </div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
+                </svg>
 
-                <!-- Category / Priority -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm font-medium mb-1">Category</label>
-                        <select id="edit-category" class="w-full px-4 py-2 border rounded-lg bg-white">
-                            <option selected disabled>Select category</option>
-                            <option value="Practice">Practice</option>
-                            <option value="Preparation">Preparation</option>
-                            <option value="Reinforcement">Reinforcement</option>
-                            <option value="Learning">Learning</option>
-                            <option value="Deepening">Deepening</option>
-                            <option value="Testing">Testing</option>
-                        </select>
-                    </div>
+            </div>
 
-                    <div>
-                        <label class="block text-sm font-medium mb-1">Priority</label>
-                        <select id="edit-priority" class="w-full px-4 py-2 border rounded-lg bg-white">
-                            <option selected disabled>Select priority</option>
-                            <option value="Medium">Medium</option>
-                            <option value="High">High</option>
-                            <option value="Low">Low</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Status / Due date -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm font-medium mb-1">Frequency</label>
-                        <select id="edit-frequency" class="w-full px-4 py-2 border rounded-lg bg-white">
-                            <option selected disabled>Select frequency</option>
-                            <option value="Daily">Daily</option>
-                            <option value="Weekly">Weekly</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium mb-1">Due Date</label>
-                        <input id="edit-due-date" type="date" class="w-full px-4 py-2 border rounded-lg">
-                    </div>
-                </div>
-
-                <!-- desc -->
+            <div class="bg-white p-5 rounded-xl shadow-sm flex flex-row place-content-between">
                 <div>
-                    <label class="block text-sm font-medium mb-1">Description</label>
-                    <input id="edit-description" rows="4" placeholder="Add details about this task..."
-                        class="w-full px-4 py-2 border rounded-lg resize-none">
+                    <p class="text-gray-500 text-sm">Completed</p>
+                    <p id="completed-tasks" class="text-3xl font-bold text-gray-800 mt-2">84</p>
                 </div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
+                </svg>
 
-                <hr>
+            </div>
 
-                <!-- actions -->
-                <div class="flex justify-end gap-4">
-                    <button id="cancel-edit" type="button" class="px-6 py-2 border rounded-lg hover:bg-gray-100">
-                        Cancel
-                    </button>
-
-                    <button type="submit"
-                        class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center gap-2">
-                        <img src="./assets/icons/save.svg" alt="">Save Task
-                    </button>
+            <div class="bg-white p-5 rounded-xl shadow-sm flex flex-row place-content-between">
+                <div>
+                    <p class="text-gray-500 text-sm">Pending Reviw</p>
+                    <p id="pending-taks" class="text-3xl font-bold text-gray-800 mt-2"></p>
                 </div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
 
-            </form>
+            </div>
+        </section>
+
+        <!-- Search filters -->
+        <div class="mb-4 flex justify-between items-center">
+            <input type="text" disabled placeholder="Search tasks..."
+                class="w-full max-w-sm px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" />
         </div>
-    </div>
-    <script type="module" src="./js/tasks.js"></script>
-</body>
 
-</html>
+        <!-- card table-->
+        <section class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <table class="w-full text-sm">
+                <thead class="bg-blue-50 text-gray-600">
+                    <tr>
+                        <th class="px-6 py-3 text-left">Task Name</th>
+                        <th class="px-6 py-3 text-left">Category</th>
+                        <th class="px-6 py-3 text-left">Priority</th>
+                        <th class="px-6 py-3 text-left">Status</th>
+                        <th class="px-6 py-3 text-left">Due Date</th>
+                        <th class="px-6 py-3 text-left">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </section>
+    </main>
+</div>
+<div id="create-task-modal" class="hidden bg-gray-100 min-h-screen absolute inset-0 bg-black bg-opacity-60">
+    <div class="max-w-4xl mx-auto px-6 py-10">
+
+        <div class="text-sm text-gray-500 mb-2 flex flex-row">
+            <img src="./assets/icons/left-arrow.svg" alt="">Back to Tasks / <span class="text-gray-700">Create
+                New</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="text-2xl font-bold mb-6">Create New Task</h1>
+
+        <!-- Form card -->
+        <form id="tasks-form" class="bg-white rounded-xl shadow-sm p-8 space-y-6">
+
+            <!-- Task title -->
+            <div>
+                <label class="block text-sm font-medium mb-1">
+                    Task Title <span class="text-red-500">*</span>
+                </label>
+                <input id="form-task-title" type="text" placeholder="e.g., Complete Quarter 3 Report"
+                    class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
+
+            <!-- Category & Priority -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium mb-1">Category</label>
+                    <select id="form-task-category" class="w-full px-4 py-2 border rounded-lg bg-white">
+                        <option selected disabled>Select category</option>
+                        <option value="Practice">Practice</option>
+                        <option value="Preparation">Preparation</option>
+                        <option value="Reinforcement">Reinforcement</option>
+                        <option value="Learning">Learning</option>
+                        <option value="Deepening">Deepening</option>
+                        <option value="Testing">Testing</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium mb-1">Priority</label>
+                    <select id="form-task-priority" class="w-full px-4 py-2 border rounded-lg bg-white">
+                        <option selected disabled>Select priority</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                        <option value="Low">Low</option>
+                    </select>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Frecuency & Due date -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium mb-1">Frequency</label>
+                    <select id="form-task-frequency" class="w-full px-4 py-2 border rounded-lg bg-white">
+                        <option selected disabled>Select frequency</option>
+                        <option value="Daily">Daily</option>
+                        <option value="Weekly">Weekly</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium mb-1">Due Date</label>
+                    <input id="form-task-due-date" type="date" class="w-full px-4 py-2 border rounded-lg">
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div>
+                <label class="block text-sm font-medium mb-1">Description</label>
+                <input id="form-task-description" rows="4" placeholder="Add details about this task..."
+                    class="w-full px-4 py-2 border rounded-lg resize-none">
+            </div>
+
+            <hr>
+
+            <!-- Actions -->
+            <div class="flex justify-end gap-4">
+                <button type="button" class="px-6 py-2 border rounded-lg hover:bg-gray-100">
+                    Cancel
+                </button>
+
+                <button type="submit"
+                    class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center gap-2">
+                    <img src="./assets/icons/save.svg" alt="">Save Task
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+<div id="edit-task-modal" class="hidden bg-gray-100 min-h-screen absolute inset-0 bg-black bg-opacity-60">
+    <div class="max-w-4xl mx-auto px-6 py-10">
+
+        <div class="text-sm text-gray-500 mb-2 flex flex-row">
+            <img src="./assets/icons/left-arrow.svg" alt="">Back to Tasks / <span class="text-gray-700">Edit
+                Task</span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="text-2xl font-bold mb-6">Edit a Task</h1>
+
+        <!-- Form card -->
+        <form id="edit-task-form" class="bg-white rounded-xl shadow-sm p-8 space-y-6">
+
+            <!-- Task title -->
+            <div>
+                <label class="block text-sm font-medium mb-1">
+                    Task Title <span class="text-red-500">*</span>
+                </label>
+                <input id="edit-title" type="text" placeholder="e.g., Complete Quarter 3 Report"
+                    class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            </div>
+
+            <!-- Category / Priority -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium mb-1">Category</label>
+                    <select id="edit-category" class="w-full px-4 py-2 border rounded-lg bg-white">
+                        <option selected disabled>Select category</option>
+                        <option value="Practice">Practice</option>
+                        <option value="Preparation">Preparation</option>
+                        <option value="Reinforcement">Reinforcement</option>
+                        <option value="Learning">Learning</option>
+                        <option value="Deepening">Deepening</option>
+                        <option value="Testing">Testing</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium mb-1">Priority</label>
+                    <select id="edit-priority" class="w-full px-4 py-2 border rounded-lg bg-white">
+                        <option selected disabled>Select priority</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Status / Due date -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium mb-1">Frequency</label>
+                    <select id="edit-frequency" class="w-full px-4 py-2 border rounded-lg bg-white">
+                        <option selected disabled>Select frequency</option>
+                        <option value="Daily">Daily</option>
+                        <option value="Weekly">Weekly</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium mb-1">Due Date</label>
+                    <input id="edit-due-date" type="date" class="w-full px-4 py-2 border rounded-lg">
+                </div>
+            </div>
+
+            <!-- desc -->
+            <div>
+                <label class="block text-sm font-medium mb-1">Description</label>
+                <input id="edit-description" rows="4" placeholder="Add details about this task..."
+                    class="w-full px-4 py-2 border rounded-lg resize-none">
+            </div>
+
+            <hr>
+
+            <!-- actions -->
+            <div class="flex justify-end gap-4">
+                <button id="cancel-edit" type="button" class="px-6 py-2 border rounded-lg hover:bg-gray-100">
+                    Cancel
+                </button>
+
+                <button type="submit"
+                    class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 flex items-center gap-2">
+                    <img src="./assets/icons/save.svg" alt="">Save Task
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
